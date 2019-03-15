@@ -21,8 +21,8 @@ p{
 	text-align: left;
 }
 img{
-	max-width: 359px;
-	width: 100%;
+	min-width: 359px;
+	width: 359px;
 	max-height: 273px;
 	height: auto;
 	margin: 0 7.4rem;
@@ -50,7 +50,16 @@ h2{
 	        justify-content: center;
 img{
 	margin: 0 0 4rem;
+	min-width: auto;
+	max-width: 359px;
+	width: 100%;
 }
 }
+}
+}
+@media screen and (max-width: 576px){
+.isobody .container .isobody-description img{
+	max-width: 215px;
+	height: 163px;	
 }
 }

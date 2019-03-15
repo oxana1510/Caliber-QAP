@@ -26,8 +26,8 @@ p{
 	text-align: left;
 }
 img{
-	max-width: 359px;
-	width: 100%;
+	min-width: 359px;
+	width: 359px;
 	max-height: 253px;
 	height: auto;
 }
@@ -58,6 +58,17 @@ p{
 	margin-bottom: 4rem;
 	padding: 0;
 }
+img{
+	min-width: auto;
+	max-width: 359px;
+	width: 100%;
 }
+}
+}
+}
+@media screen and (max-width: 576px){
+.canadacenter .container .canadacenter-description img{
+	max-width: 215px;	
+	height: 152px;
 }
 }
