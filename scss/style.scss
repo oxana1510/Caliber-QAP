@@ -29,7 +29,11 @@ li{
 input{
 	border: none;
 }
-input[type=submit]{
+input[type=submit],
+input[type=text],
+input[type=tel],
+input[type=email],
+textarea{
      -webkit-appearance: none;
      border-radius: 0;
 }

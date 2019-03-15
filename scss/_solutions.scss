@@ -26,7 +26,7 @@ p{
 }
 &:last-child{
 	-webkit-box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.3);
-	        box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.3)
+	        box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.3);
 }
 div{
 	margin: 2rem 0;
@@ -60,6 +60,17 @@ p{
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	margin-top: 5rem;
+.solutions-items{
+	padding: 0 2rem;
+&:first-child{
+ 	-webkit-box-shadow: none;
+ 	        box-shadow: none;
+}
+&:last-child{
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+}
 }
 }	
 }
