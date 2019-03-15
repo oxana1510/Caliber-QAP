@@ -504,3 +504,8 @@ span{
 }
 
 
+@media handheld{
+.form-search input[type=text]{
+	padding-bottom: 2.4rem;
+}
+}
