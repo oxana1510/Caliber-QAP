@@ -1,0 +1,18 @@
+.copyright{
+	background: #3c3c3c;
+.container{
+	text-align: center;
+	padding: 7rem 3rem;
+	color: #808080;
+	font-size: 1.6rem;
+	line-height: 3rem;
+img{
+	margin-bottom: 3.3rem;
+}
+}
+}
+@media screen and (max-width: 576px){
+.copyright .container{
+	padding: 4rem 1.5rem;
+}	
+}

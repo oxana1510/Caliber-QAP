@@ -1,0 +1,94 @@
+.spfprogram{
+	background: #ccc;
+.container{
+	padding: 15rem 14rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+.spfprogram-left{
+img{
+	margin-bottom: 2.5rem;
+}
+a{
+	position: relative;
+	display: block;
+	font: 2.8rem $font-title;
+	border: 0.2rem solid #afafaf;
+	padding: 2.6rem 5rem 2.6rem 10.2rem;
+	color: #000;
+	white-space: nowrap;
+img{
+	position: absolute;
+	left: 4.5rem;
+    top: 1.7rem;
+    width: 41px;
+    height: 47px;
+}
+&:hover img{
+	-webkit-transform: scale(1.2, 1.2);
+	    -ms-transform: scale(1.2, 1.2);
+	        transform: scale(1.2, 1.2);
+}
+}
+}
+.spfprogram-right{
+	padding: 0 5rem;
+h2{
+	font: 4.6rem $font-title;
+	margin-bottom: 3.5rem;
+}
+p{
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+	margin-bottom: 3.5rem;
+	font-weight: 600;
+}
+}
+}
+}
+@media screen and (max-width: 1180px){
+.spfprogram .container{
+	padding: 8rem 5rem;
+}
+}
+@media screen and (max-width: 992px){
+.spfprogram .container{
+	padding: 4rem 3rem;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+.spfprogram-right{
+	padding: 0;
+	margin-top: 4rem;
+h2{
+	text-align: center;
+}
+}
+}
+}
+@media screen and (max-width: 576px){
+.spfprogram .container{
+.spfprogram-righ{
+h2{
+	font-size: 4rem;
+}
+}
+.spfprogram-left{
+	text-align: center;
+ img{
+	width: 80%;
+	height: auto;
+}
+a{
+	font-size: 2.3rem;
+	padding: 2rem 2.7rem 2rem 7.9rem;
+img{
+	left: 2.9rem;
+    top: 1rem;
+}
+}
+}
+}
+}

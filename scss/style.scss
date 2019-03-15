@@ -1,0 +1,81 @@
+@import "fonts";
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+              box-sizing: border-box;
+}
+html{
+	font-size: 10px;
+}
+body{
+	overflow-x: hidden;
+}
+.wrapper{
+	min-width: 320px;
+	color:  #000;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	font-family: $font-text;	
+	overflow-x: hidden;
+	overflow-x: hidden;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+input{
+	border: none;
+}
+input[type=submit]{
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+.container{
+	margin: 0 auto;
+	max-width: 1280px;
+}
+.button{
+	font: 3.6rem $font-title;
+	color: #fff;
+	background: #509f5f;
+	padding: 2.1rem 6.8rem;
+	cursor: pointer;
+&:hover{
+	background: #509f5f * 1.1;
+}
+}
+.button-absolute{
+	position: absolute;
+    bottom: -42px;
+    left: auto;
+    right: calc(50% - 17.8rem);
+    top: auto;
+}
+@media screen and (max-width: 576px){
+.button{
+	padding: 1.5rem 3.7rem;
+}
+.button-absolute{
+	bottom: -36px;
+    right: calc(50% - 14.6rem);
+}
+}
+@import "header";
+@import "nav";
+@import "reviews";
+@import "tabs";
+@import "manufacturers";
+@import "solutions";
+@import "link_block";
+@import "whychooseus";
+@import "spfprogram";
+@import "certificationcourse";
+@import "satisfaction";
+@import "canadacenter";
+@import "isobody";
+@import "copyright";
+
+

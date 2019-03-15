@@ -1,0 +1,54 @@
+.reviews{
+	position: relative;
+	top: -6.5rem;
+	background: #292929;
+	color: #fff;
+	font-size: 1.8rem;
+	z-index: 1;
+.container{
+	padding: 14rem 19rem 3.5rem 19rem;
+	text-align: center;
+.icon-star:before{
+	color: #ffae00;
+	font-size: 4rem;
+}
+p{
+	padding: 0.8rem 9rem;
+	position: relative;
+&:after,
+&:before{
+	content:"";
+	position: absolute;
+	display: block;
+	width: 5.2rem;
+	height: 3.4rem;
+	top: 0;
+}
+&:after{
+	background: url(../img/quote-left.svg);
+	left: 0;
+}
+&:before{
+	background: url(../img/quote-right.svg);
+	right: 0;
+}
+}
+}
+}
+@media screen and(max-width: 820px){
+.reviews .container{
+	padding: 14rem 4rem 3rem;
+}
+}
+@media screen and(max-width: 690px){
+.reviews .container{
+	padding: 14rem 4rem 1.5rem;
+p{
+	padding: 4rem 5rem;
+&:before{
+	bottom: 0;
+    top: auto;
+}
+}
+}
+}
