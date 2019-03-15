@@ -231,6 +231,7 @@ p:last-child{
 textarea{
 	display: -ms-grid;
 	display: grid;
+	border: none;
 	font: 1.5rem $font-text;
 	-ms-grid-column: 1;
 	-ms-grid-column-span: 2;
