@@ -193,11 +193,7 @@ span{
 	z-index: 99;
 }
 &:after{
-	border-left: 0.3rem solid #e0824b;
-	border-bottom: none;
-	left: 0.2rem;
-	height: 100%;
-	bottom: auto;
+	display: none;
 }
 }
 .tab > *:nth-child(1){

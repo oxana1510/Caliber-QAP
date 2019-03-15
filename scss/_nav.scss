@@ -14,7 +14,22 @@ ul{
 	-ms-grid-columns: (auto)[6];
 	grid-template-columns: repeat(6, auto);
 	position: relative;
+&:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 65px;
+  top: 0;
+  z-index: -1;
+  background: rgba(128, 128, 128, 0.8);
+ -webkit-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+     transform: skew(-20deg);
+}
 li{
+	text-align: center;
 &:first-child:after{
 	content: "";
     position: absolute;
@@ -34,6 +49,7 @@ a{
 	display: block;
 	padding: 0 2rem;
 	margin-top: 2.5rem;
+	white-space: nowrap;
 &:before{
   content: "";
   position: absolute;
@@ -43,7 +59,7 @@ a{
   height: 65px;
   top: -25px;
   z-index: -1;
-  background: rgba(128, 128, 128, 0.8);
+  background: transparent;
  -webkit-transform: skew(-20deg);
   -ms-transform: skew(-20deg);
      transform: skew(-20deg);
@@ -67,6 +83,8 @@ a{
  	width: 25px;
     height: 100%;
     left: -25px;
+    background: -webkit-linear-gradient(159deg, #fff 0, #fff 50%, transparent 50%, transparent 100%);
+    background: -o-linear-gradient(159deg, #fff 0, #fff 50%, transparent 50%, transparent 100%);
     background: linear-gradient(-69deg, #fff 0, #fff 50%, transparent 50%, transparent 100%);
     right: auto;
 }
@@ -99,7 +117,7 @@ input[type=text]{
 	cursor: pointer;
 }
 }
-.main-top .container{
+.main-top{
 	position: relative;
 	z-index: 2;
 	font-size: 1.5rem;
@@ -202,12 +220,14 @@ p:last-child{
 }
 
 .form-wrap{
+	position: relative;
 	display: -ms-grid;
 	display: grid;
 	-ms-grid-columns: auto auto auto;
 	grid-template-columns: auto auto auto;
   	-ms-grid-rows: auto auto auto;
   	grid-template-rows: auto auto auto;
+  	padding-bottom: 10rem;
  input[type=text],
  input[type=tel],
  input[type=email]{
@@ -218,13 +238,70 @@ p:last-child{
  	-webkit-box-shadow: 0 0 0.4rem rgba(24, 24, 24, 0.42);
  	        box-shadow: 0 0 0.4rem rgba(24, 24, 24, 0.42);
 	background: #fff;
-	color: #7e7e7e;
+ }
+ input[type=text]::-webkit-input-placeholder,
+ input[type=tel]::-webkit-input-placeholder,
+ input[type=email]::-webkit-input-placeholder,{
+  color: #000; 
+  opacity: 1;/* Firefox */
+}
+ input[type=text]:-ms-input-placeholder,
+ input[type=tel]:-ms-input-placeholder,
+ input[type=email]:-ms-input-placeholder,{
+  color: #000; 
+  opacity: 1;/* Firefox */
+}
+ input[type=text]::-ms-input-placeholder,
+ input[type=tel]::-ms-input-placeholder,
+ input[type=email]::-ms-input-placeholder,{
+  color: #000; 
+  opacity: 1;/* Firefox */
+}
+ input[type=text]::placeholder,
+ input[type=tel]::placeholder,
+ input[type=email]::placeholder,{
+  color: #000; 
+  opacity: 1;/* Firefox */
+}
+ input[type=text]::-ms-input-placeholder,
+ input[type=tel]::-ms-input-placeholder,
+ input[type=email]::-ms-input-placeholder,{
+  color: #000;
+  opacity: 1; /* Microsoft Edge */
+}
+ input[type=text]:-ms-input-placeholder,
+ input[type=tel]:-ms-input-placeholder,
+ input[type=email]:-ms-input-placeholder,{
+  color: #000;
+  opacity: 1; /* Internet Explorer 10-11 */
+}
+ input::-webkit-input-placeholder,
+ textarea::-webkit-input-placeholder{
+ 	color: #000;
+ 	opacity: 1;
+ }
+ input::-webkit-input-placeholder,
+ textarea::-webkit-input-placeholder{
+ 	color: #000;
+ 	opacity: 1;
+ }
+ input::-moz-placeholder,
+ textarea::-moz-placeholder{
+ 	color: #000;
+ 	opacity: 1;
+ }
+  input:-moz-placeholder,
+ textarea:-moz-placeholder{
+ 	color: #000;
+ 	opacity: 1;
  }
 .button-form{
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-column: 2;
-	    grid-column-start: 2;
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 18rem);
+	right: auto;
+	bottom: -81px;
+	z-index: 1;
 	margin-top: 4.4rem;
 	max-width: 35rem;
 }
@@ -292,16 +369,30 @@ textarea{
 .mobail-menu-close{
 	display: none;
 }
+@media screen and (max-width: 1280px){
+.main-top .block-nav{
+	-ms-grid-columns: 80% 20%;
+	grid-template-columns: 80% 20%; 
+}
+}
 @media screen and (max-width: 1031px){
-.main-top .block-nav .menu ul li a{
+.main-top .block-nav{
+
+.menu ul li a{
 	padding: 0 1rem;
 }
 }
-@media screen and (max-width: 992px){
-.top-header .container{
-	margin-top: 6rem;
 }
-.main-top .container .title .img-clover{
+@media screen and (max-width: 992px){
+.top-header{
+	margin-top: 6rem;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.main-top .title .img-clover{
 	left: 0;
 }
 .main-top .block-nav{
@@ -310,14 +401,17 @@ textarea{
 ul{
 	-ms-grid-columns: 100%;
 	grid-template-columns: 100%;
-	top: -2.5rem;
+&:before{
+	background: transparent;
+}
 li{
 	text-align: center;
 a{
 	margin-top: 4.9rem;
 &:before{
-	width: 98%;
-	background: rgba(128,128,128,0.95);
+	 -webkit-transform: skew(0deg);
+	     -ms-transform: skew(0deg);
+	         transform: skew(0deg); 
 }
 }
 &:first-child:after{
@@ -346,6 +440,7 @@ a{
 	height: 32px;
 	right: 20px;
 	top: 20px;
+	z-index: 4;
 
 &:before, &:after {
 	position: absolute;
@@ -373,11 +468,13 @@ cursor: pointer;
 z-index: 99;
 }
 .main-top .block-nav .responsive{
-	position:absolute;
+	position:fixed;
 	display: block;
 	width: 100%;
 	top: 0;
+	padding-bottom: 2.4rem;
 	z-index: 3;
+	background: rgba(128,128,128,0.95);
 	-webkit-animation: navmenumobile 0.4s ease-out;
 		        animation: navmenumobile 0.4s ease-out;
 	
@@ -429,7 +526,7 @@ input[type=text]{
 
 
 @media screen and (max-width: 820px){
-.main-top .container .title{
+.main-top.title{
 	padding: 4rem 3rem;
 	margin-top: 15rem;
 }
@@ -446,7 +543,7 @@ input[type=text]{
 }
 }
 @media screen and (max-width: 690px){
-.main-top .container{
+.main-top{
 .title, 
 .form{
 	padding: 4rem 1.5rem;
@@ -464,11 +561,6 @@ input[type=text]{
 .form-wrap{
 	-ms-grid-columns: 100%;
 	grid-template-columns: 100%;
-.button-form{
-	-ms-grid-column: 1;
-	    grid-column-start: 1;
-	margin: auto auto;
-}
 }
 .form-wrap{
  input[type=email],
@@ -503,9 +595,14 @@ span{
 }
 }
 
-
-@media handheld{
-.form-search input[type=text]{
-	padding-bottom: 2.4rem;
+@media screen and (max-width: 576px){
+.form-wrap{
+	padding-bottom: 3rem;
+.button-form{
+	font-size: 3rem;
+	left: calc(50% - 12.3rem);
+	padding: 1.3rem 3rem;
+	bottom: -69px;
+}
 }
 }
