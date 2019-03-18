@@ -378,26 +378,6 @@ textarea{
 	-ms-grid-row: 2;
 	-ms-grid-column: 3;
 }
-
-// .form-wrap > *:nth-child(6){
-// 	-ms-grid-row: 2;
-// 	-ms-grid-column: 3;
-// }
-
-// .form-wrap > *:nth-child(7){
-// 	-ms-grid-row: 3;
-// 	-ms-grid-column: 1;
-// }
-
-// .form-wrap > *:nth-child(8){
-// 	-ms-grid-row: 3;
-// 	-ms-grid-column: 2;
-// }
-
-// .form-wrap > *:nth-child(9){
-// 	-ms-grid-row: 3;
-// 	-ms-grid-column: 3;
-// }
 .mobail-menu,
 .mobail-menu-close{
 	display: none;
@@ -497,14 +477,14 @@ a{
     cursor: pointer;
     padding-top: 5px;
     width: 32px;
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 20px;
 
 }
 .mobail-menu-close{
 	display: none;
-	position: absolute;
+	position: fixed;
 	width: 32px;
 	height: 32px;
 	right: 20px;
@@ -537,7 +517,7 @@ cursor: pointer;
 z-index: 99;
 }
 .main-top .block-nav .responsive{
-	position:fixed;
+	position: fixed;
 	display: block;
 	width: 50%;
     top: 0;
@@ -636,6 +616,7 @@ input[type=text]{
 .form-wrap{
 	-ms-grid-columns: 25% 25% 25% 25%;
   	-ms-grid-rows: auto auto auto auto auto;
+  		grid-template-columns: auto auto;
  input[type=text]{
 	display: -ms-grid;
 	display: grid;
@@ -743,5 +724,14 @@ span{
 .main-top .block-nav .responsive{
 	width: 100%;
 	right: 0;
+}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+.form{
+&:after,
+&:before{
+display: none;
+}
 }
 }
