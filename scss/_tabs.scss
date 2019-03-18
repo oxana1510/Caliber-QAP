@@ -95,6 +95,7 @@ p{
 	position: relative;
 	display: grid;
     grid-template-columns: auto auto auto auto auto;
+    z-index: 7;
 &:after{
 	content: "";
 	position: absolute;
