@@ -477,14 +477,14 @@ a{
     cursor: pointer;
     padding-top: 5px;
     width: 32px;
-    position: fixed;
+    position: absolute;
     right: 20px;
     top: 20px;
 
 }
 .mobail-menu-close{
 	display: none;
-	position: fixed;
+	position: absolute;
 	width: 32px;
 	height: 32px;
 	right: 20px;
@@ -519,7 +519,7 @@ z-index: 99;
 .main-top .block-nav .responsive{
 	position: fixed;
 	display: block;
-	width: 50%;
+	width: 100%;
     top: 0;
     left: auto;
     right: 0;
@@ -720,10 +720,6 @@ span{
 	bottom: -69px;
 }
 }
-}
-.main-top .block-nav .responsive{
-	width: 100%;
-	right: 0;
 }
 }
 
