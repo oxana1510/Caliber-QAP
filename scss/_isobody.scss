@@ -1,7 +1,7 @@
 .isobody{
 .container{
 	position: relative;
-	padding: 17rem 14rem 10rem;
+	padding: 3.5rem 14rem 10rem;
 	margin-bottom: 7%;
 	text-align: center;
 h2{
@@ -17,7 +17,6 @@ p{
 	font-size: 1.6rem;
 	line-height: 2.8rem;
 	max-width: 60.8rem;
-	font-weight: 600;
 	text-align: left;
 }
 img{
@@ -32,12 +31,12 @@ img{
 }
 @media screen and (max-width: 1180px){
 .isobody .container{
-	padding: 17rem 5rem 10rem;
+	padding: 3.5rem 5rem 10rem;
 }
 }
 @media screen and (max-width: 992px){
 .isobody .container{
-	padding: 17rem 3rem 10rem;
+	padding: 3.5rem 3rem 10rem;
 h2{
 	font-size: 4rem;
 	margin-bottom: 4rem;
